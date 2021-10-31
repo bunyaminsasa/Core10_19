@@ -1,0 +1,50 @@
+﻿@model UrunVM
+
+<table border="1">
+    <tr>
+        <th>Ad</th>
+        <th>Fiyat</th>
+        <th>Kategori</th>
+        <th>Menşei</th>
+    </tr>
+
+    @foreach (Urun u in Model.Ürünler)
+    {
+        <tr>
+            <td>@u.Adı</td>
+            <td>@u.Fiyat</td>
+            <td>@u.Kategori</td>
+            <td>@u.Menşei</td>
+        </tr>
+    }
+</table>
+<hr />
+<table border="1">
+    <tr>
+        <th>ID</th>
+    </tr>
+
+    @foreach (Kategori k in Model.Kategoriler)
+    {
+        <tr>
+            <td>@k.Ad</td>
+        </tr>
+    }
+</table>
+
+<hr />
+
+<table border="1">
+    <tr>
+        <th>MarkaAdi</th>
+        <th>Menşei</th>
+    </tr>
+
+    @foreach (Marka m in Model.Markalar)
+    {
+        <tr>
+            <td>@m.MarkaAdı</td>
+            <td>@m.Menşei</td>
+        </tr>
+    }
+</table>

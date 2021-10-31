@@ -1,0 +1,21 @@
+﻿@model List<Ogrenci>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Bolum</th>
+        <th>TC</th>
+    </tr>
+
+    @foreach (Ogrenci o in Model)
+    {
+        <tr>
+           <td>@o.ID</td>
+           <td>@o.Ad</td>
+           <td>@o.Bolum</td>
+           <td>@o.TC</td>
+
+        </tr>
+    }
+</table>

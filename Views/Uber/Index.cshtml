@@ -1,0 +1,36 @@
+﻿@model UberVM
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Driver</th>
+        <th>Passenger</th>
+        <th>Location</th>
+    </tr>
+
+    @foreach (Uber ub in Model.Uber)
+    {
+        <tr>
+            <td>@ub.ID</td>
+            <td>@ub.DriverName</td>
+            <td>@ub.PassangerName</td>
+            <td>@ub.Location</td>
+        </tr>
+    }
+</table>
+<hr />
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Number</th>
+    </tr>
+
+    @foreach (Sertifika s in Model.Sertifika)
+    {
+        <tr>
+            <td>@s.ID</td>
+            <td>@s.Name</td>
+            <td>@s.Number</td>
+        </tr>
+    }

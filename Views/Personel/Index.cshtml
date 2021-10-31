@@ -1,0 +1,37 @@
+﻿@model PersonelVM
+
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Adi</th>
+        <th>Departman</th>
+        <th>Maas</th>
+    </tr>
+
+    @foreach (Personel p in Model.Personeller)
+    {
+        <tr>
+            <td>@p.ID</td>
+            <td>@p.Name</td>
+            <td>@p.Departman</td>
+            <td>@p.Salary</td>
+        </tr>
+    }
+</table>
+<hr />
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Adi</th>
+    </tr>
+
+    @foreach (Departman d in Model.Departmanlar)
+    {
+        <tr>
+            <td>@d.ID</td>
+            <td>@d.Name</td>
+           
+        </tr>
+    }
+</table>
